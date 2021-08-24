@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
-from food.views import ChartView
+from .views import ChartView
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html')),
-    path('api/v1/chart/', ChartView.as_view(), name="result_api")
+    path('api/v1/chart/', ChartView.as_view(), name="result_api"),
+    # path('result/', result_detail, name='result_detail'),
+    # path('', TemplateView.as_view(template_name='index.html')),
 ]
